@@ -30,6 +30,12 @@ app.get('/posts/:id_post', (req, res) => {
     .catch((error) => console.log('ERROR:', error));
 })
 
+app.get('/authors/:id_author', (req, res) => {
+    db.one('SELECT * FROM public."AUTHOR" WHERE id_author=$1', [req.params.id_author])
+    .then((data) => res.json(data))
+    .catch((error) => console.log('ERROR:', error));
+})
+
 app.listen(8000, ()=>{
     console.log('Servidor corriendo en el puerto 8000');
 })

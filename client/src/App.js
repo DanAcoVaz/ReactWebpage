@@ -6,6 +6,7 @@ import Home from './components/Home.js';
 import Blog from './components/Blog.js';
 import Contact from './components/Contact.js';
 import PostPage from './components/PostPage.js';
+import AuthorPage from './components/AuthorPage.js';
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
         <Route path="/blog" element={<Blog></Blog>}></Route>
         <Route path="/contact" element={<Contact></Contact>}></Route>
         <Route path="/blog/:id_post" element={<PostPage></PostPage>}></Route>
+        <Route path="/blog/author/:id_author" element={<AuthorPage></AuthorPage>}></Route>
       </Routes>
     </div>
   );
